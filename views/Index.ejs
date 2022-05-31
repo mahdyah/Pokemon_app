@@ -9,11 +9,12 @@
 </head>
 <body>
     <h1>See All The Pokemon!</h1>
-    <ul> <%pokemon.map((poke,index)=>{%>
+    <ul>  <%pokemon.map((poke,index)=>{%>
         <li>
     
             <%=poke.name[0].toUpperCase()+poke.name.slice(1)%>  </li>
-<a href="/pokemon/<%=index%>">ClickMe</a>
+            <img src=<%=`${pokemon.img}.jpg`%>  width ="400" height="300" >
+<a href="/pokemon/<%=index%>">OPEN</a>
           <%  }) %>
     </ul>
 </body>
