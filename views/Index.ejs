@@ -11,9 +11,9 @@
     <h1>See All The Pokemon!</h1>
     <ul> <%pokemon.map((poke,index)=>{%>
         <li>
-           
+    
             <%=poke.name[0].toUpperCase()+poke.name.slice(1)%>  </li>
-
+<a href="/pokemon/<%=index%>">ClickMe</a>
           <%  }) %>
     </ul>
 </body>
