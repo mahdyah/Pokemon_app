@@ -10,6 +10,13 @@ app.get('/',(req,res)=>{
     // res.send('Wecome to the Pokemon App!')
     res.send(pokemon)
 })
+app.get('/pokemon',(req,res)=>{
+    // res.send('Wecome to the Pokemon App!')
+    
+    res.render('Index',{
+        pokemon:pokemon
+    })
+})
 app.listen(port,()=>{
     console.log(`The server is running on port ${port} ...`)
 })
