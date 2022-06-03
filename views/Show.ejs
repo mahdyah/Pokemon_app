@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="server.js" defer></script>
+ 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +12,13 @@
   
         <li>
     
-            <%=pokemon[index].name.toUpperCase()%>  
+            <%=pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)%>  
            <br>
-            <img src=<%=`${pokemon[index].img}.jpg`%> width ="700" height="700" >
+            <img src=<%=`${pokemon.img}.jpg`%> width ="700" height="700" >
         </li>
-<a href="/pokemon">ZOOM OUT</a>
+<a href="/pokemon">Catch</a>
      
+<br><br>
+
 </body>
 </html>

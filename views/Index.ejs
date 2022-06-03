@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="server.js" defer></script>
+  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,23 @@
 </head>
 <body>
     <h1>See All The Pokemon!</h1>
-    <ul>  <%pokemon.map((poke,index)=>{%>
-        <li>
-    
-            <%=poke.name[0].toUpperCase()+poke.name.slice(1)%>  </li>
+    <a href="/pokemon/new">Add A new Pokemon</a>
+    <ul>  <%pokemon.map((pokemon)=>{%>
+      
+<li>
+        <%=pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)%>
+        <br><br>
+        
+            <img src =  <%=` ${pokemon.img}.jpg` %>  width ="100" height="100" >
+            <a href="/pokemon/<%=pokemon._id%>">Open</a>
             <br>
-            <img src =  <%=` ${poke.img}.jpg` %>  width ="100" height="100" >
+        </li>
          
 <br>
-<a href="/pokemon/<%=index%>">ZOOM IN</a>
+
 <br><br>
           <%  }) %>
+         
     </ul>
 </body>
 </html>
